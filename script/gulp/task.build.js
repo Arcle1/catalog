@@ -32,28 +32,57 @@ const getPackageSchema = (meta) => {
 };
 
 /**
+ * Get versions of linter from linters file
+ * @param {object} lint - linter from linters file
+ * @param {string} manager - package manager (npm, pip, etc.)
+ * @return {array} - list of versions
+ */
+const getVersions = async (lint, manager) => {
+    if (!lint.version) return await manager.getVersions(lint.name);
+    return lint.version === 'latest' ? [] :
+        Array.isArray(lint.version) ? lint.version : [lint.version];
+};
+
+/**
+ * Get meta for all linters & all versions from linters file
+ * @param {stream} file - stream from linters file
+ * @return {array} - two-dimensional array with linters meta
+ */
+const getMeta = (file) => {
+    const packages = bufferToJson(file.contents);
+    const manager = registry.getManager(packages.manager);
+    return Promise.all(
+        packages.linters.map(async (lint) => {
+            const versions = await getVersions(lint, manager);
+            if (versions.length === 0) {
+                const meta = await manager.getMeta(lint.name);
+                return [getPackageSchema(meta)];
+            }
+            return Promise.all(versions.map(async (version) => {
+                const meta = await manager.getMeta(lint.name, version);
+                return getPackageSchema(meta);
+            }));
+        })
+    );
+};
+
+/**
  * Get array of objects, where each contains meta of linter and base & path where it will be stored
  * @return {array} obj - array of objects with data of linters
  */
-const getMeta = () => {
+const getFiles = () => {
     return through2.obj(async function (file, enc, next) {
-        const packages = bufferToJson(file.contents);
 
-        const manager = registry.getManager(packages.manager);
-        let metaLinters = await Promise.all(
-            packages.linters.map(async (lint) => {
-                let meta = await manager.getMeta(lint);
-                return getPackageSchema(meta);
-            })
-        );
-
+        let metaLinters = await getMeta(file);
         metaLinters.map(obj => {
-            const base = path.join(file.path, obj.name);
-            this.push(new File({
-                base: base,
-                path: path.join(base, 'package.json'),
-                contents: jsonToBuffer(obj),
-            }));
+            obj.map((elem) => {
+                const base = path.join(file.path, elem.name);
+                this.push(new File({
+                    base: base,
+                    path: path.join(base, 'package.json'),
+                    contents: jsonToBuffer(elem),
+                }));
+            })
         });
 
         next();
@@ -63,7 +92,7 @@ const getMeta = () => {
 // Gulp build task
 const build = () => gulp
     .src(core.cfg.src.linters)
-    .pipe(getMeta())
+    .pipe(getFiles())
     .pipe(gulp.dest((file) => {
         const content = bufferToJson(file.contents);
         return path.join(core.cfg.build.dir, content.name);
