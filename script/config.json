@@ -1,0 +1,13 @@
+{
+    "src": {
+        "linters": "src/linters.**.json"
+    },
+    "build": {
+        "dir": "build",
+        "packages": "build/**/package.json"
+    },
+    "schemas": {
+        "package": "package.json",
+        "deps": "deps.json"
+    }
+}

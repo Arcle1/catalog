@@ -1,8 +1,0 @@
-{
-    "src": {
-        "linters": "src/linters.**.json"
-    },
-    "build": {
-        "dir": "build/"
-    }
-}
