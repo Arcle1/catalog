@@ -1,34 +1,92 @@
 {
     "manager": "npm",
     "linters": [
-        "alex",
-        "bootlint",
-        "clinton",
-        "coffeelint",
-        "colorguard",
-        "csscomb",
-        "csslint",
-        "eslint",
-        "html-inspector",
-        "htmlhint",
-        "jscpd",
-        "jscs",
-        "jshint",
-        "jslint",
-        "jsonlint",
-        "lesslint",
-        "markdownlint",
-        "nsp",
-        "plato",
-        "polylint",
-        "prettier",
-        "pug-lint",
-        "remark-lint",
-        "sass-lint",
-        "standard",
-        "stylelint",
-        "stylint",
-        "tslint",
-        "xo"
+        {
+            "name": "alex"
+        },
+        {
+            "name": "bootlint"
+        },
+        {
+            "name": "clinton"
+        },
+        {
+            "name": "coffeelint"
+        },
+        {
+            "name": "colorguard"
+        },
+        {
+            "name": "csscomb"
+        },
+        {
+            "name": "csslint"
+        },
+        {
+            "name": "eslint"
+        },
+        {
+            "name": "html-inspector"
+        },
+        {
+            "name": "htmlhint"
+        },
+        {
+            "name": "jscpd"
+        },
+        {
+            "name": "jscs"
+        },
+        {
+            "name": "jshint"
+        },
+        {
+            "name": "jslint"
+        },
+        {
+            "name": "jsonlint"
+        },
+        {
+            "name": "lesslint"
+        },
+        {
+            "name": "markdownlint"
+        },
+        {
+            "name": "nsp"
+        },
+        {
+            "name": "plato"
+        },
+        {
+            "name": "polylint"
+        },
+        {
+            "name": "prettier"
+        },
+        {
+            "name": "pug-lint"
+        },
+        {
+            "name": "remark-lint"
+        },
+        {
+            "name": "sass-lint"
+        },
+        {
+            "name": "standard"
+        },
+        {
+            "name": "stylelint"
+        },
+        {
+            "name": "stylint"
+        },
+        {
+            "name": "tslint"
+        },
+        {
+            "name": "xo"
+        }
     ]
 }
