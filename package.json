@@ -12,11 +12,15 @@
     "repository": "linterhub/catalog",
     "bugs": "https://github.com/linterhub/catalog/issues",
     "scripts": {
-        "build": "node script/build.js"
+        "build": "node script/build.js",
+        "eslint": "./node_modules/.bin/eslint",
+        "lint": "eslint ."
     },
     "devDependencies": {
         "@linterhub/registry": "^1.0.0",
         "@linterhub/schema": "^1.4.0",
+        "eslint": "^5.5.0",
+        "eslint-config-google": "^0.9.1",
         "fs-extra": "^7.0.0",
         "glob": "^7.1.3"
     }
