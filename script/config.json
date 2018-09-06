@@ -4,7 +4,7 @@
     },
     "build": {
         "dir": "build",
-        "packages": "build/**/package.json"
+        "schema": "build/**/*.json"
     },
     "schemas": {
         "package": "package.json",
