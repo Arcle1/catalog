@@ -1,0 +1,87 @@
+{
+    "manager": "pip",
+    "linters": [
+        {
+            "name": "bandit",
+            "languages": [
+                "Python"
+            ]
+        },
+        {
+            "name": "flake8",
+            "languages": [
+                "Python"
+            ]
+        },
+        {
+            "name": "lizard",
+            "languages": [
+                "Objective-C",
+                "C",
+                "C++",
+                "Java",
+                "C#",
+                "JavaScript",
+                "Swift",
+                "Python",
+                "Ruby",
+                "PHP",
+                "Scala",
+                "GDScript",
+                "TTCN-3"
+            ]
+        },
+        {
+            "name": "ocstyle",
+            "languages": [
+                "Python",
+                "Objective-C"
+            ]
+        },
+        {
+            "name": "proselint",
+            "languages": [
+                "Markdown"
+            ]
+        },
+        {
+            "name": "prospector",
+            "languages": [
+                "Python"
+            ],
+            "configs": [
+                ".prospector"
+            ]
+        },
+        {
+            "name": "pycodestyle",
+            "languages": [
+                "Python"
+            ]
+        },
+        {
+            "name": "pep8",
+            "languages": [
+                "Python"
+            ]
+        },
+        {
+            "name": "pyflakes",
+            "languages": [
+                "Python"
+            ]
+        },
+        {
+            "name": "pylint",
+            "languages": [
+                "Python"
+            ]
+        },
+        {
+            "name": "radon",
+            "languages": [
+                "Python"
+            ]
+        }
+    ]
+}
