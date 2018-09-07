@@ -1,0 +1,53 @@
+{
+    "manager": "gem",
+    "linters": [
+        {
+            "name": "brakeman",
+            "languages": [
+                "Ruby"
+            ]
+        },
+        {
+            "name": "flay",
+            "languages": [
+                "Ruby"
+            ]
+        },
+        {
+            "name": "flog",
+            "languages": [
+                "Ruby"
+            ]
+        },
+        {
+            "name": "puppet-lint",
+            "languages": [
+                "Ruby"
+            ]
+        },
+        {
+            "name": "rubocop",
+            "languages": [
+                "Ruby"
+            ]
+        },
+        {
+            "name": "ruby-lint",
+            "languages": [
+                "Ruby"
+            ]
+        },
+        {
+            "name": "scss-lint",
+            "languages": [
+                "SCSS"
+            ]
+        },
+        {
+            "name": "site_validator",
+            "languages": [
+                "Ruby"
+            ]
+        }
+    ]
+}
