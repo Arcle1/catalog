@@ -2,91 +2,259 @@
     "manager": "npm",
     "linters": [
         {
-            "name": "alex"
+            "name": "alex",
+            "languages": [
+                "Text"
+            ]
         },
         {
-            "name": "bootlint"
+            "name": "bootlint",
+            "languages": [
+                "HTML"
+            ]
         },
         {
-            "name": "clinton"
+            "name": "clinton",
+            "languages": [
+                "JavaScript"
+            ]
         },
         {
-            "name": "coffeelint"
+            "name": "coffeelint",
+            "languages": [
+                "CoffeeScript"
+            ]
         },
         {
-            "name": "colorguard"
+            "name": "colorguard",
+            "languages": [
+                "CSS"
+            ]
         },
         {
-            "name": "csscomb"
+            "name": "csscomb",
+            "languages": [
+                "CSS"
+            ],
+            "configs": [
+                ".csscomb.json"
+            ]
         },
         {
-            "name": "csslint"
+            "name": "csslint",
+            "languages": [
+                "CSS",
+                "OOCSS",
+                "Less"
+            ],
+            "configs": [
+                ".csslintrc"
+            ]
         },
         {
-            "name": "eslint"
+            "name": "eslint",
+            "languages": [
+                "JavaScript",
+                "JSX"
+            ],
+            "configs": [
+                ".eslintrc",
+                ".eslintrc.json",
+                ".eslintrc.yaml",
+                ".eslintrc.yml",
+                ".eslintrc.js"
+            ]
         },
         {
-            "name": "html-inspector"
+            "name": "html-inspector",
+            "languages": [
+                "HTML"
+            ]
         },
         {
-            "name": "htmlhint"
+            "name": "htmlhint",
+            "languages": [
+                "HTML"
+            ]
         },
         {
-            "name": "jscpd"
+            "name": "jedi",
+            "languages": [
+                "Pug",
+                "JEDI",
+                "CoffeeCup"
+            ]
         },
         {
-            "name": "jscs"
+            "name": "jscpd",
+            "languages": [
+                "JavaScript",
+                "Java",
+                "YAML",
+                "CoffeeScript",
+                "C++",
+                "Haxe",
+                "PHP",
+                "C#",
+                "TypeScript",
+                "Go",
+                "Python",
+                "HTML",
+                "Ruby",
+                "C",
+                "SCSS",
+                "Less",
+                "CSS",
+                "Erlang",
+                "Swift",
+                "XML",
+                "Objective-C",
+                "Puppet",
+                "Twig",
+                "Vue",
+                "Scala",
+                "Lua",
+                "Perl"
+            ],
+            "configs": [
+                ".cpd.yaml"
+            ]
         },
         {
-            "name": "jshint"
+            "name": "jscs",
+            "languages": [
+                "JavaScript"
+            ]
         },
         {
-            "name": "jslint"
+            "name": "jshint",
+            "languages": [
+                "JavaScript"
+            ]
         },
         {
-            "name": "jsonlint"
+            "name": "jslint",
+            "languages": [
+                "JavaScript"
+            ],
+            "configs": [
+                "jslint.conf",
+                ".jslint.conf"
+            ]
         },
         {
-            "name": "lesslint"
+            "name": "jsonlint",
+            "languages": [
+                "JSON"
+            ]
         },
         {
-            "name": "markdownlint"
+            "name": "lesslint",
+            "languages": [
+                "Less"
+            ]
         },
         {
-            "name": "nsp"
+            "name": "markdownlint",
+            "languages": [
+                "Markdown"
+            ]
         },
         {
-            "name": "plato"
+            "name": "nsp",
+            "languages": [
+                "JavaScript"
+            ]
         },
         {
-            "name": "polylint"
+            "name": "plato",
+            "languages": [
+                "JavaScript"
+            ]
         },
         {
-            "name": "prettier"
+            "name": "polylint",
+            "languages": [
+                "HTML",
+                "JavaScript"
+            ]
         },
         {
-            "name": "pug-lint"
+            "name": "prettier",
+            "languages": [
+                "JavaScript",
+                "TypeScript",
+                "CSS",
+                "SCSS",
+                "Less",
+                "JSX",
+                "Vue",
+                "GraphQL",
+                "JSON",
+                "Markdown"
+            ],
+            "configs": [
+                ".prettierrc",
+                "prettier.config.js"
+            ]
         },
         {
-            "name": "remark-lint"
+            "name": "pug-lint",
+            "languages": [
+                "Jade"
+            ]
         },
         {
-            "name": "sass-lint"
+            "name": "remark-lint",
+            "languages": [
+                "Markdown"
+            ]
         },
         {
-            "name": "standard"
+            "name": "sass-lint",
+            "languages": [
+                "Sass",
+                "SCSS"
+            ]
         },
         {
-            "name": "stylelint"
+            "name": "standard",
+            "languages": [
+                "JavaScript"
+            ]
         },
         {
-            "name": "stylint"
+            "name": "stylelint",
+            "languages": [
+                "CSS",
+                "Less",
+                "SCSS"
+            ],
+            "configs": [
+                ".stylelintrc",
+                "stylelint.config.js"
+            ]
         },
         {
-            "name": "tslint"
+            "name": "stylint",
+            "languages": [
+                "CSS"
+            ],
+            "configs": [
+                ".stylintrc"
+            ]
         },
         {
-            "name": "xo"
+            "name": "tslint",
+            "languages": [
+                "TypeScript"
+            ]
+        },
+        {
+            "name": "xo",
+            "languages": [
+                "JavaScript"
+            ]
         }
     ]
 }
