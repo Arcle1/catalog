@@ -1,0 +1,50 @@
+{
+    "manager": "composer",
+    "linters": [
+        {
+            "name": "php_codesniffer",
+            "languages": [
+                "PHP",
+                "JavaScript",
+                "CSS"
+            ]
+        },
+        {
+            "name": "php-assumptions",
+            "languages": [
+                "PHP"
+            ]
+        },
+        {
+            "name": "wapmorgan/php-code-fixer",
+            "languages": [
+                "PHP",
+                "HTML+PHP"
+            ]
+        },
+        {
+            "name": "sebastian/phpcpd",
+            "languages": [
+                "PHP"
+            ]
+        },
+        {
+            "name": "phpmd",
+            "languages": [
+                "PHP"
+            ]
+        },
+        {
+            "name": "phpmetrics",
+            "languages": [
+                "PHP"
+            ]
+        },
+        {
+            "name": "phpsa",
+            "languages": [
+                "PHP"
+            ]
+        }
+    ]
+}
