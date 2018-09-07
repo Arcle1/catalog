@@ -44,6 +44,24 @@ const getMetaSchema = (data, manager) => {
 };
 
 /**
+ * Get linter schema from linters file (languages, extensions, etc.)
+ * @param {object} linter - linter from linters file
+ * @param {object} meta - package object from package.json
+ * @return {object} - linter data
+ */
+const getLinterSchema = (linter, meta) => {
+    let linterSchema = {
+        $schema: schema.linter.$id,
+        $version: schema.linter.$version,
+        package: meta.package,
+    };
+    if (linter.languages) linterSchema.languages = linter.languages;
+    if (linter.extensions) linterSchema.extensions = linter.extensions;
+    if (linter.configs) linterSchema.configs = linter.configs;
+    return linterSchema;
+};
+
+/**
  * Create package directory
  * @param {string} name - name of package
  * @param {string} version - version of package
@@ -93,17 +111,20 @@ const run = () => {
 
                     const metaSchema = getMetaSchema(metaData, json.manager);
                     const depsSchema = getDepsSchema(depsData, metaSchema);
+                    const linterSchema = getLinterSchema(linter, metaSchema);
 
                     const linterDir = mkPackageDir(linter.name);
                     const linterVersionDir = mkPackageDir(linter.name, version);
 
                     writeFile(linterVersionDir, config.schemas.package, metaSchema);
                     writeFile(linterVersionDir, config.schemas.deps, depsSchema);
+                    writeFile(linterVersionDir, config.schemas.linter, linterSchema);
 
                     const lastVersion = versions[versions.length - 1];
                     if (metaSchema.version === lastVersion) {
                         writeFile(linterDir, config.schemas.package, metaSchema);
                         writeFile(linterDir, config.schemas.deps, depsSchema);
+                        writeFile(linterDir, config.schemas.linter, linterSchema);
                     }
                 });
             });

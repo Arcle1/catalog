@@ -8,6 +8,7 @@
     },
     "schemas": {
         "package": "package.json",
-        "deps": "deps.json"
+        "deps": "deps.json",
+        "linter": "linter.json"
     }
 }
